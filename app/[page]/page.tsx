@@ -25,9 +25,20 @@ export default async function Home({
         <div className="flex flex-col items-center gap-12">
           <Book page={Number(page)} />
 
-          <Link href={"/new"} className={buttonVariants()}>
-            Pridėti įrašą
-          </Link>
+          <div className="flex flex-col gap-2">
+            <Link href={"/new"} className={buttonVariants()}>
+              Pridėti įrašą
+            </Link>
+            <Link
+              className="text-center"
+              target="_blank"
+              href={
+                "https://drive.google.com/file/d/1q7d7_kvjj0xD964LqNkxWoSYlxoQy1Ku/view?usp=drive_link"
+              }
+            >
+              Kas čia?
+            </Link>
+          </div>
         </div>
 
         {Number(page) * 6 < (count ?? 0) && (
