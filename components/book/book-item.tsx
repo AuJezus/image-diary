@@ -24,7 +24,7 @@ export default function BookItem({
         "flex-row-reverse": reverse,
       })}
     >
-      <div className="mx-8 h-auto w-fit max-w-[50%] border-2 border-neutral-500 bg-pink-200 p-2 pb-6">
+      <div className="mx-8 h-full w-fit max-w-[50%] border-2 border-neutral-500 bg-pink-200 p-2 pb-6">
         <Image
           alt="photo"
           src={imageUrl}

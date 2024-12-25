@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "../utils/supabase/server";
+import { redirect } from "next/navigation";
 
 export async function createBookEntry({
   description,
@@ -29,6 +30,7 @@ export async function createBookEntry({
       throw new Error(`Failed to create book entry: ${entryError.message}`);
     }
 
+    redirect("1");
     return entryData;
   } catch (error) {
     console.error("Error creating book entry:", error);
